@@ -238,6 +238,7 @@ orgs.newOrg('eclipse-volttron') {
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('volttron-lib-boptest'),
     orgs.newRepo('volttron-lib-curve') {
       allow_update_branch: false,
       secret_scanning: "disabled",
@@ -253,6 +254,7 @@ orgs.newOrg('eclipse-volttron') {
         orgs.newEnvironment('test_env'),
       ],
     },
+    orgs.newRepo('volttron-lib-energyplus'),
     orgs.newRepo('volttron-lib-fake-driver') {
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
