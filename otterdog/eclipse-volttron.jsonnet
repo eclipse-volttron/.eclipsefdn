@@ -63,6 +63,7 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-ansible') {
       allow_update_branch: false,
+      dependabot_security_updates_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
@@ -128,6 +129,7 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-core') {
       allow_update_branch: false,
+      dependabot_security_updates_enabled: true,
       has_discussions: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
