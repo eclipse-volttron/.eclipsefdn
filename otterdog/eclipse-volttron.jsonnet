@@ -49,6 +49,12 @@ orgs.newOrg('eclipse-volttron') {
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('eclipse-volttron.github.io') {
+      allow_update_branch: false,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('github-tooling') {
       allow_update_branch: false,
       secret_scanning: "disabled",
