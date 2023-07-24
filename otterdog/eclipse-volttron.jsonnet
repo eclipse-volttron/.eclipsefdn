@@ -69,6 +69,7 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-ansible') {
       allow_update_branch: false,
+      dependabot_security_updates_enabled: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
@@ -134,6 +135,8 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-core') {
       allow_update_branch: false,
+      dependabot_security_updates_enabled: true,
+      has_discussions: true,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
@@ -203,14 +206,16 @@ orgs.newOrg('eclipse-volttron') {
         },
       ],
     },
-    orgs.newRepo('volttron-energyplus'),
+    orgs.newRepo('volttron-energyplus') {
+    },
     orgs.newRepo('volttron-forward-historian') {
       allow_update_branch: false,
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
-    orgs.newRepo('volttron-gridappsd'),
+    orgs.newRepo('volttron-gridappsd') {
+    },
     orgs.newRepo('volttron-lib-auth') {
       allow_update_branch: false,
       default_branch: "initial_dev",
@@ -303,7 +308,8 @@ orgs.newOrg('eclipse-volttron') {
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
-    orgs.newRepo('volttron-lib-tagging'),
+    orgs.newRepo('volttron-lib-tagging') {
+    },
     orgs.newRepo('volttron-lib-tls') {
       allow_update_branch: false,
       secret_scanning: "disabled",
@@ -389,7 +395,8 @@ orgs.newOrg('eclipse-volttron') {
         orgs.newEnvironment('test_env'),
       ],
     },
-    orgs.newRepo('volttron-mongo-tagging'),
+    orgs.newRepo('volttron-mongo-tagging') {
+    },
     orgs.newRepo('volttron-openadr-ven') {
       allow_update_branch: false,
       has_wiki: false,
@@ -469,7 +476,8 @@ orgs.newOrg('eclipse-volttron') {
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
-    orgs.newRepo('volttron-sqlite-tagging'),
+    orgs.newRepo('volttron-sqlite-tagging') {
+    },
     orgs.newRepo('volttron-testing') {
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
