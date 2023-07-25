@@ -52,6 +52,14 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('eclipse-volttron.github.io') {
       allow_update_branch: false,
       web_commit_signoff_required: false,
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
     },
     orgs.newRepo('github-tooling') {
       allow_update_branch: false,
