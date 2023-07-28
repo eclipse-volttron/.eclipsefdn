@@ -51,6 +51,9 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('eclipse-volttron.github.io') {
       allow_update_branch: false,
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "main",
+      gh_pages_source_path: "/",
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
