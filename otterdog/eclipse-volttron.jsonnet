@@ -39,14 +39,10 @@ orgs.newOrg('eclipse-volttron') {
   _repositories+:: [
     orgs.newRepo('.github') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('docker') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('eclipse-volttron.github.io') {
@@ -66,21 +62,15 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('github-tooling') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-actuator') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-ansible') {
       allow_update_branch: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://reviewable-prod.appspot-preview.com/github') {
@@ -113,8 +103,6 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-bacnet-proxy') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://webhook.zenhub.com/webhook/github/v2') {
@@ -138,16 +126,12 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-boptest') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-core') {
       allow_update_branch: false,
       dependabot_security_updates_enabled: true,
       has_discussions: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://webhook.zenhub.com/webhook/github/v2') {
@@ -189,20 +173,14 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-dnp3-master') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-dnp3-outstation') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-docs') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/eclipse-volttron/239940/') {
@@ -219,8 +197,6 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-forward-historian') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-gridappsd') {
@@ -228,14 +204,10 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-lib-auth') {
       allow_update_branch: false,
       default_branch: "initial_dev",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-lib-bacnet-driver') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       secrets: [
         orgs.newRepoSecret('PRIVATE_SSH_KEY') {
@@ -245,8 +217,6 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-lib-base-driver') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('test_env'),
@@ -254,28 +224,20 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-lib-base-historian') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-lib-curve') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-lib-dnp3-driver') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('test_env'),
       ],
     },
     orgs.newRepo('volttron-lib-fake-driver') {
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       secrets: [
         orgs.newRepoSecret('PRIVATE_SSH_KEY') {
@@ -285,8 +247,6 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-lib-modbus-driver') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       secrets: [
         orgs.newRepoSecret('PRIVATE_SSH_KEY') {
@@ -296,8 +256,6 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-lib-modbustk-driver') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       secrets: [
         orgs.newRepoSecret('PRIVATE_SSH_KEY') {
@@ -307,28 +265,20 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-lib-rmq') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-lib-sql-historian') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-lib-tagging') {
     },
     orgs.newRepo('volttron-lib-tls') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-lib-web') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://devops.pnnl.gov/api/v4/projects/117/mirror/pull') {
@@ -362,14 +312,10 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-lib-zmq') {
       allow_update_branch: false,
       default_branch: "initial_dev",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-listener') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       template_repository: "VOLTTRON/volttron-new-agent-template",
       web_commit_signoff_required: false,
       webhooks: [
@@ -409,8 +355,6 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-openadr-ven') {
       allow_update_branch: false,
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://webhook.zenhub.com/webhook/github/v2') {
@@ -443,8 +387,6 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-platform-driver') {
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://webhook.zenhub.com/webhook/github/v2') {
@@ -468,28 +410,20 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-postgresql-historian') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-sql-historian') {
       allow_update_branch: false,
       description: "volttron-sql-historian",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-sqlite-historian') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-sqlite-tagging') {
     },
     orgs.newRepo('volttron-testing') {
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://webhook.zenhub.com/webhook/github/v2') {
@@ -516,15 +450,11 @@ orgs.newOrg('eclipse-volttron') {
     },
     orgs.newRepo('volttron-web-client') {
       allow_update_branch: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-website') {
       allow_update_branch: false,
       default_branch: "master",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
   ],
