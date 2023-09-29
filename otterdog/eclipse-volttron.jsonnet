@@ -56,6 +56,24 @@ orgs.newOrg('eclipse-volttron') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "main",
       gh_pages_source_path: "/",
+
+      web_commit_signoff_required: false,
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "main"
+          ],
+          deployment_branch_policy: "selected",
+        },
+      ],
+    },
+    orgs.newRepo('eclipse-volttron.github.io') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "main",
+      gh_pages_source_path: "/",
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -71,6 +89,11 @@ orgs.newOrg('eclipse-volttron') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
+    },
+    orgs.newRepo('volttron-airside-rcx') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      default_branch: "main",
     },
     orgs.newRepo('volttron-actuator') {
       allow_merge_commit: true,
@@ -217,10 +240,16 @@ orgs.newOrg('eclipse-volttron') {
         },
       ],
     },
+    orgs.newRepo('volttron-economizer-rcx') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      default_branch: "main",
+    },
     orgs.newRepo('volttron-energyplus') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
     },
+    
     orgs.newRepo('volttron-forward-historian') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -230,6 +259,16 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-gridappsd') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+    },
+    orgs.newRepo('volttron-heat-recovery') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      default_branch: "main",
+    },
+    orgs.newRepo('volttron-ilc') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      default_branch: "main",
     },
     orgs.newRepo('volttron-lib-auth') {
       allow_merge_commit: true,
@@ -310,6 +349,11 @@ orgs.newOrg('eclipse-volttron') {
           value: "********",
         },
       ],
+    },
+    orgs.newRepo('volttron-proactive-diagnostic') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      default_branch: "main",
     },
     orgs.newRepo('volttron-lib-rmq') {
       allow_merge_commit: true,
