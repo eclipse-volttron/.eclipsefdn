@@ -1,6 +1,6 @@
 site_name: Otterdog configuration @ eclipse-volttron
 site_description: Otterdog configuration @ eclipse-volttron
-strict: true
+strict: false
 
 site_url: https://eclipse-volttron.github.io/.eclipsefdn/
 
