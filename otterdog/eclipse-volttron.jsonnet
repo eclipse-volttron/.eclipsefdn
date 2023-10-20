@@ -56,24 +56,6 @@ orgs.newOrg('eclipse-volttron') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "main",
       gh_pages_source_path: "/",
-
-      web_commit_signoff_required: false,
-      environments: [
-        orgs.newEnvironment('github-pages') {
-          branch_policies+: [
-            "main"
-          ],
-          deployment_branch_policy: "selected",
-        },
-      ],
-    },
-    orgs.newRepo('eclipse-volttron.github.io') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "main",
-      gh_pages_source_path: "/",
       web_commit_signoff_required: false,
       environments: [
         orgs.newEnvironment('github-pages') {
@@ -90,16 +72,22 @@ orgs.newOrg('eclipse-volttron') {
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
     },
-    orgs.newRepo('volttron-airside-rcx') {
-      allow_merge_commit: true,
-      delete_branch_on_merge: false,
-      default_branch: "main",
-    },
     orgs.newRepo('volttron-actuator') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
+    },
+    orgs.newRepo('volttron-agent-watcher') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('volttron-airside-rcx') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      default_branch: "main",
     },
     orgs.newRepo('volttron-ansible') {
       allow_merge_commit: true,
@@ -245,11 +233,22 @@ orgs.newOrg('eclipse-volttron') {
       delete_branch_on_merge: false,
       default_branch: "main",
     },
+    orgs.newRepo('volttron-emailer') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('volttron-energyplus') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
     },
-    
+    orgs.newRepo('volttron-file-watcher') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('volttron-forward-historian') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -456,6 +455,12 @@ orgs.newOrg('eclipse-volttron') {
         orgs.newEnvironment('test_env'),
       ],
     },
+    orgs.newRepo('volttron-log-statistics') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('volttron-mongo-tagging') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
@@ -543,6 +548,18 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
     },
+    orgs.newRepo('volttron-sysmon') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
+    orgs.newRepo('volttron-threshold-detection') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('volttron-testing') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
@@ -569,6 +586,12 @@ orgs.newOrg('eclipse-volttron') {
       environments: [
         orgs.newEnvironment('test_env'),
       ],
+    },
+    orgs.newRepo('volttron-topic-watcher') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
     },
     orgs.newRepo('volttron-web-client') {
       allow_merge_commit: true,
