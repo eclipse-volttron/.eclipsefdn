@@ -4,6 +4,9 @@ strict: false
 
 site_url: https://eclipse-volttron.github.io/.eclipsefdn/
 
+repo_name: eclipse-volttron/.eclipsefdn
+repo_url: https://github.com/eclipse-volttron/.eclipsefdn/
+
 docs_dir: ./docs
 site_dir: ./_site
 
