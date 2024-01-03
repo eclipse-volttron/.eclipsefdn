@@ -82,6 +82,15 @@ orgs.newOrg('eclipse-volttron') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('volttron') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('volttron-actuator') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -656,6 +665,15 @@ orgs.newOrg('eclipse-volttron') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('volttron-rmq') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('volttron-sql-historian') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -731,6 +749,15 @@ orgs.newOrg('eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-topic-watcher') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('volttron-zmq') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
