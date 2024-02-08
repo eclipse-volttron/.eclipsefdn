@@ -709,6 +709,15 @@ orgs.newOrg('eclipse-volttron') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('volttron-test-utils') {
+      allow_merge_commit: false,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('volttron-testing') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
