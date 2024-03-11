@@ -35,19 +35,54 @@ orgs.newOrg('eclipse-volttron') {
     },
   ],
   _repositories+:: [
+    orgs.extendRepo('.eclipsefdn') {
+      private_vulnerability_reporting_enabled: true,
+    },
     orgs.newRepo('.github') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('copier-poetry-volttron-agent') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      webhooks: [
+        orgs.newRepoWebhook('https://webhook.zenhub.com/webhook/github/v2') {
+          content_type: "json",
+          events+: [
+            "issue_comment",
+            "issues",
+            "label",
+            "member",
+            "meta",
+            "milestone",
+            "pull_request",
+            "pull_request_review",
+            "pull_request_review_comment",
+            "repository",
+            "team_add"
+          ],
+          secret: "********",
+        },
+      ],
+    },
     orgs.newRepo('docker') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -60,6 +95,7 @@ orgs.newOrg('eclipse-volttron') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "main",
       gh_pages_source_path: "/",
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -77,6 +113,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -86,6 +123,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -95,6 +133,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -104,6 +143,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -112,6 +152,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-airside-rcx') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -121,6 +162,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -158,6 +200,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -186,6 +229,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -197,6 +241,7 @@ orgs.newOrg('eclipse-volttron') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       has_discussions: true,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -243,6 +288,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -252,6 +298,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -261,6 +308,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -279,6 +327,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-economizer-rcx') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -287,6 +336,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -295,6 +345,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-energyplus') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -303,6 +354,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -312,6 +364,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -320,6 +373,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-gridappsd') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -327,6 +381,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-heat-recovery') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -334,6 +389,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-ilc') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -343,6 +399,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_update_branch: false,
       default_branch: "initial_dev",
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -352,6 +409,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -366,6 +424,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -378,6 +437,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -387,6 +447,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -396,6 +457,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -407,6 +469,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-lib-fake-driver') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -418,9 +481,9 @@ orgs.newOrg('eclipse-volttron') {
       ],
     },
     orgs.newRepo('volttron-lib-homeassistant-driver') {
-      allow_merge_commit: false,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -433,6 +496,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -447,6 +511,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -461,6 +526,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -470,6 +536,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -478,6 +545,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-lib-tagging') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -486,6 +554,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -495,6 +564,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -533,6 +603,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_update_branch: false,
       default_branch: "initial_dev",
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -542,6 +613,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       template_repository: "VOLTTRON/volttron-new-agent-template",
       web_commit_signoff_required: false,
       workflows+: {
@@ -583,6 +655,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -591,6 +664,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-mongo-tagging') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -600,6 +674,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       has_wiki: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -637,6 +712,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       has_wiki: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -665,6 +741,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -673,6 +750,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-proactive-diagnostic') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -681,6 +759,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -691,6 +770,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "volttron-sql-historian",
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -700,6 +780,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -708,6 +789,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-sqlite-tagging') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -716,15 +798,16 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
       },
     },
     orgs.newRepo('volttron-test-utils') {
-      allow_merge_commit: false,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -733,6 +816,7 @@ orgs.newOrg('eclipse-volttron') {
     orgs.newRepo('volttron-testing') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -764,6 +848,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -773,15 +858,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-    },
-    orgs.newRepo('volttron-zmq') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -791,6 +868,7 @@ orgs.newOrg('eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -801,9 +879,20 @@ orgs.newOrg('eclipse-volttron') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         enabled: false,
+      },
+    },
+    orgs.newRepo('volttron-zmq') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
       },
     },
   ],
