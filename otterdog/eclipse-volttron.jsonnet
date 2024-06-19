@@ -401,6 +401,17 @@ orgs.newOrg('eclipse-volttron') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('volttron-lib-auth-zap') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "initial_dev",
+      delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('volttron-lib-bacnet-driver') {
       allow_merge_commit: true,
       allow_update_branch: false,
