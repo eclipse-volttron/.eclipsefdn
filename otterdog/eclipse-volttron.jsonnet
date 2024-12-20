@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-volttron') {
+orgs.newOrg('iot.volttron', 'eclipse-volttron') {
   settings+: {
     description: "",
     name: "Eclipse VOLTTRON",
