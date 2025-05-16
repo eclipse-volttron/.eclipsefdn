@@ -872,12 +872,12 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
     orgs.newRepo('volttron-website') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
+      default_branch: "main",
       delete_branch_on_merge: false,
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
-        enabled: false,
+        enabled: true,
       },
     },
     orgs.newRepo('volttron-zmq') {
