@@ -45,6 +45,16 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('bacnet-scan-tool') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('copier-poetry-volttron-agent') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -105,6 +115,16 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       ],
     },
     orgs.newRepo('github-tooling') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('platform-lookup') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -392,7 +412,6 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
     orgs.newRepo('volttron-lib-auth') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "initial_dev",
       delete_branch_on_merge: false,
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
@@ -596,7 +615,6 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
     orgs.newRepo('volttron-lib-zmq') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "initial_dev",
       delete_branch_on_merge: false,
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
