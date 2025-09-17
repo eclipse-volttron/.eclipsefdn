@@ -457,16 +457,6 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('volttron-lib-curve') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      private_vulnerability_reporting_enabled: true,
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-    },
     orgs.newRepo('volttron-lib-dnp3-driver') {
       allow_merge_commit: true,
       allow_update_branch: false,
