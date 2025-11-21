@@ -97,9 +97,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "main",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "workflow",
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
