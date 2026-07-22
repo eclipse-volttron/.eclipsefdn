@@ -143,6 +143,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('lib-protocol-proxy-mqtt') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -153,6 +154,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('lib-protocol-proxy-nats') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -338,6 +340,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       ],
     },
     orgs.newRepo('volttron-dnp3-master') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -575,6 +578,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       ],
     },
     orgs.newRepo('volttron-lib-rmq') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -603,6 +607,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-lib-tls') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -817,6 +822,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-rmq') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -827,6 +833,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-sql-historian') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -866,6 +873,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-test-utils') {
+      archived: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       private_vulnerability_reporting_enabled: true,
@@ -936,6 +944,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-web-client') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
