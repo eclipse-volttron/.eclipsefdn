@@ -185,6 +185,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-actuator') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -252,6 +253,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       ],
     },
     orgs.newRepo('volttron-bacnet-proxy') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -599,6 +601,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-lib-tagging') {
+      archived: true,
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       private_vulnerability_reporting_enabled: true,
@@ -728,6 +731,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-mongo-tagging') {
+      archived: true,
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       private_vulnerability_reporting_enabled: true,
@@ -855,6 +859,7 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       },
     },
     orgs.newRepo('volttron-sqlite-tagging') {
+      archived: true,
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       private_vulnerability_reporting_enabled: true,
