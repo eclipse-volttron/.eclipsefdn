@@ -152,6 +152,26 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('lib-protocol-proxy-ieee2030_5') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('lib-protocol-proxy-dnp3') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('lib-protocol-proxy-mqtt') {
       archived: true,
       allow_merge_commit: true,
@@ -532,6 +552,16 @@ orgs.newOrg('iot.volttron', 'eclipse-volttron') {
       environments: [
         orgs.newEnvironment('test_env'),
       ],
+    },
+    orgs.newRepo('volttron-lib-ieee2030_5-driver') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('volttron-lib-fake-driver') {
       allow_merge_commit: true,
